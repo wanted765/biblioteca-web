@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: rgb(30,30,30);
+}
+
+/* Navigation */
+.navigation {
+    height: 70px;
+    background: rgb(30,30,30);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-movil {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-movil span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav-menu a:hover {
+    background: #3d3d3d;
+    border-radius: 6px;
+}
+
+.nav-submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #444;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-submenu a {
+    padding: 0.5rem 1rem;
+}
+
+.nav-menu li:hover .nav-submenu {
+    display: block;
+}
+
+/* Header */
+.header {
+    background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0;
+    margin-top: 8rem; 
+}
+
+.header h1 {
+    font-size: 3rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+}
+
+/* Sections */
+section {
+    padding: 4rem;
+    text-align: center;
+    
+}
+
+section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.tipo {
+    background: #333;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    margin: 1rem;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.tipo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tipo button {
+    background:  #00d4ff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tipo button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Grid layout for sections */
+.contenedor-tipos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer .footer-contenido {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer .footer-section {
+    flex: 1;
+    margin: 1rem;
+    min-width: 200px;
+}
+
+footer .footer-section h2 {
+    margin-bottom: 1rem;
+}
+
+footer .social a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-movil {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-menu.nav-menu-visible {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .nav-submenu {
+        position: static;
+    }
+
+    .nav-submenu a {
+        padding-left: 2rem;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    p {
+        padding: 30px;
+    }
+}
